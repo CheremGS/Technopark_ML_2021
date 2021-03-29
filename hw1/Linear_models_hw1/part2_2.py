@@ -3,6 +3,7 @@
 #                                                  [0.6, 0.1, 0.2, 0.1],
 #                                                  [0.1, 0.6, 0.2, 0.1],
 #                                                  [0.2, 0.2, 0.2, 0.4]], (y_predict with labels = [1, 0, 1, 3]
+# output: number(float), sum( of all values metric)/n
 
 def accuracy_score(y_true, y_predict, percent = None):
     if not percent:
@@ -51,7 +52,7 @@ def recall_score(y_true, y_predict, percent = None):
                       (y_predict[:bound].argmax(axis = 1) == x_i), 1, 0).sum()
         if tp == 0:
             continue
-        
+        # all_t_p = tp + fn
         all_t_p = (y_true[:bound] == x_i).sum()
                             
         result += tp/(all_t_p)
