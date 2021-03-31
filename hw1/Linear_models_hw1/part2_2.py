@@ -2,8 +2,9 @@
 # for example: y_true = [1, 0, 3, 3], y_predict = [[0.1, 0.5, 0.3, 0.1],
 #                                                  [0.6, 0.1, 0.2, 0.1],
 #                                                  [0.1, 0.6, 0.2, 0.1],
-#                                                  [0.2, 0.2, 0.2, 0.4]], (y_predict with labels = [1, 0, 1, 3]
-# output: number(float), sum( of all values metric)/n
+#                                                  [0.2, 0.2, 0.2, 0.4]].
+#              (y_predict with labels = [1, 0, 1, 3]
+# output: vector of metrix for each classes except accuracy_score
 
 def accuracy_score(y_true, y_predict, percent = None):
     if not percent:
