@@ -4,7 +4,7 @@
 #                                                  [0.1, 0.6, 0.2, 0.1],
 #                                                  [0.2, 0.2, 0.2, 0.4]].
 #              (y_predict with labels = [1, 0, 1, 3]
-# output: vector of metrix for each classes except accuracy_score
+# output: vector of metrics for each classes except accuracy_score
 
 def accuracy_score(y_true, y_predict, percent = None):
     if not percent:
